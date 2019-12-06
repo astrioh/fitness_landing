@@ -34,3 +34,36 @@
         align-items: flex-end; 
     }
 }
+
+@media(max-width: 1023px) {
+    .header {
+        justify-content: space-around;
+    }
+}
+
+@media(max-width: 767px) {
+   .header {
+       &__logo {
+           width: 200px;
+       }
+   }
+}
+
+@media(max-width: 575px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        &__logo {
+            width: 250px;
+        }
+        &__official {
+            width: 100%;
+            margin-top: 10px;
+        }
+        &__contacts {
+            width: 100%;
+            align-items: center;
+            margin-top: 5px;
+        }
+    }
+}
