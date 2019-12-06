@@ -28,6 +28,7 @@
         width: 425px;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 67px;
     }
     &__icon {
         width: 108px;
@@ -51,5 +52,12 @@
             text-transform: uppercase;
             color: #fff;
         }
+    }
+}
+
+@media(max-width: 960px) {
+    .promo {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
