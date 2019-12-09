@@ -32,4 +32,20 @@ $(document).ready(function(){
     }
     toggleSlide('link');
     toggleSlide('back');
+
+    //Модальные окна
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn();
+    });
+
+    $('.modal__close, .overlay').on('click', function() {
+        $('.overlay, #consultation, #order, #thank_you').fadeOut();
+    });
+
+    $('.button_mini').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn();
+        });
+    });
   });
